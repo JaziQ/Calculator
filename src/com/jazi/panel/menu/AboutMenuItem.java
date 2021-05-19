@@ -6,8 +6,20 @@ import java.net.URL;
 
 import static java.awt.Image.SCALE_FAST;
 
-public class AboutFrame extends JDialog {
-    public AboutFrame() {
+/**
+ * Class for adding <code>AboutMenuItem</code> in <code>MenuBar</code>
+ * Contains information about the author
+ *
+ * @author Andreev G.A.
+ */
+public class AboutMenuItem extends JDialog {
+
+
+    /**
+     * Create a new <code>AboutMenuItem</code>
+     * Add a information about author, author's photo on the <code>JPanel</code>
+     */
+    public AboutMenuItem() {
         setTitle("About Author");
         JPanel aboutLabel = new JPanel();
         aboutLabel.setLayout(new BoxLayout(aboutLabel, BoxLayout.Y_AXIS));
@@ -45,6 +57,7 @@ public class AboutFrame extends JDialog {
                 + "Andreev Gleb Alexandrovich<br>"
                 + "gleb_andreev01@mail.ru<br></h2></center></html>");
         authorLabel.setAlignmentX(CENTER_ALIGNMENT);
+        authorLabel.setHorizontalAlignment(JLabel.CENTER);
         jPanel.add(authorLabel);
     }
 

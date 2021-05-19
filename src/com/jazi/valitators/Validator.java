@@ -28,7 +28,7 @@ public class Validator {
     public static boolean noOperatorValidation(String string){
         if (string.length() == 0)
             return true;
-        return !string.replaceAll("[^-+/*]", "").equals(string);
+        return string.replaceAll("[-+/*]", "").equals(string);
     }
 
 }

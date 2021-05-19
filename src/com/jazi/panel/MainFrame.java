@@ -1,7 +1,7 @@
 package com.jazi.panel;
 
-import com.jazi.Calculator;
-import com.jazi.panel.menu.MenusItems;
+import com.jazi.logic.Calculator;
+import com.jazi.panel.menu.MenuBar;
 import com.jazi.valitators.Validator;
 
 import javax.swing.*;
@@ -14,7 +14,7 @@ import java.awt.event.KeyEvent;
 
 /**
  * A <code>MainPanel</code> extends of <code>JFrame</code>
- * Creates a calculator window, adds an input field, menus item, button with numeric and calculation operator
+ * Creates a calculator window
  *
  * @author Andreev G.A.
  */
@@ -24,9 +24,11 @@ public class MainFrame extends JFrame {
 
     /**
      * Creates a new <code>MainPanel</code>
+     * adds an input field, menus item,
+     * button with numeric and calculation operator in the <code>JPanel</code>
      */
     public MainFrame() {
-        MenusItems menusItems = new MenusItems();
+        MenuBar menuBar = new MenuBar();
         window.setSize(300, 435);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.getContentPane().setBackground(Color.white);
@@ -34,7 +36,7 @@ public class MainFrame extends JFrame {
         window.setResizable(false);
         window.setLocationRelativeTo(null);
 
-        window.setJMenuBar(menusItems.createJMenu());
+        window.setJMenuBar(menuBar.createJMenu());
         enterArea();
         monthButton();
         pack();

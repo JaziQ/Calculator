@@ -1,21 +1,21 @@
-package com.jazi;
+package com.jazi.logic;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static java.lang.System.err;
-
 /**
- * This class calculate value from string
+ * Class contains the calculation logic
+ *
+ * @author Andreev G.A.
  */
 public class Calculator {
 
     /**
-     * Метод
+     * Computes the returned values by dividing the resulting string into subexpressions.
      *
-     * @param expression  значения в стринге, которые надо посчитать
-     * @return <code>Double</code> result
+     * @param expression  expression to be evaluated
+     * @return <code>Double</code> result after calculation
      */
     public static Double eval(String expression) {
 

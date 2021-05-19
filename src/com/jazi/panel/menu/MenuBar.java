@@ -3,15 +3,16 @@ package com.jazi.panel.menu;
 import javax.swing.*;
 
 /**
- *
+ * Class for adding <code>MenuBar</code> in <code>MainFrame</code>
  *
  * @author Andreev G.A.
  */
-public class MenusItems extends JFrame {
+public class MenuBar extends JFrame {
     /**
-     * Создаем меню, куда входят окно об авторе, help
+     * Create a new <code>MenuBar</code>
+     * Add item <code>AboutMenuItem</code> and <code>HelpMenuItem</code> in <code>MenuBar</code>
      *
-     * @return menuBar - JMenuBar
+     * @return <code>JMenuBar</code> menuBar - for use in <code>MainFrame</code>
      */
     public JMenuBar createJMenu() {
         JMenuBar menuBar = new JMenuBar();
@@ -30,7 +31,7 @@ public class MenusItems extends JFrame {
     private JMenuItem createAbout() {
         JMenuItem about = new JMenuItem("About");
         about.addActionListener(e -> {
-            AboutFrame aboutFrame = new AboutFrame();
+            AboutMenuItem aboutMenuItem = new AboutMenuItem();
         });
         return about;
     }
@@ -38,7 +39,7 @@ public class MenusItems extends JFrame {
     private JMenuItem createHelp() {
         JMenuItem help = new JMenuItem("Help");
         help.addActionListener(e -> {
-            HelpFrame helpFrame = new HelpFrame();
+            HelpMenuItem helpMenuItem = new HelpMenuItem();
         });
         return help;
     }
